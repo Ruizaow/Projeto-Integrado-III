@@ -1,0 +1,52 @@
+.form-post-card {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 16px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 20px auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  color: #0f0161;
+}
+
+input, textarea {
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+.row input {
+  flex: 1;
+}
+
+button {
+  background: #0f0161;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #444;
+}
