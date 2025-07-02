@@ -24,8 +24,8 @@ const Post = ({ username, imageUrl, description, onMapClick }) => {
       <div className="post-footer">
         <button className="map-button" onClick={onMapClick}>Ir para o mapa</button>
         <div className="actions">
-          <span>💬</span>
-          <span>🔖</span>
+          <button>💬</button>
+          <button>❤️</button>
           <span>🔗</span>
         </div>
       </div>
