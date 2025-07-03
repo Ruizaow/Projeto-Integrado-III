@@ -10,7 +10,7 @@ import {
   FiMenu,
   FiX,
 } from 'react-icons/fi';
-import './sidebar.css';
+import './Sidebar.css';
 
 const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
