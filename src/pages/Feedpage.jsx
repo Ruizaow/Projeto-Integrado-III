@@ -1,12 +1,19 @@
-import React, { useState } from 'react';
-import CreatePostForm from '../Components/CreatePostForm.jsx';
-import Post from '../Components/post.jsx';
+import { useState } from 'react';
+import CreatePostForm from '../components/CreatePostForm.jsx';
+import Post from '../components/Post.jsx';
 
 const FeedPage = () => {
   const [posts, setPosts] = useState([]);
 
   const handleCreatePost = (newPost) => {
-    setPosts([newPost, ...posts]);
+    const previewUrl = newPost.image ? URL.createObjectURL(newPost.image) : null;
+
+    const postWithPreview = {
+      ...newPost,
+      image: previewUrl,
+    };
+
+    setPosts([postWithPreview, ...posts]);
   };
 
   return (

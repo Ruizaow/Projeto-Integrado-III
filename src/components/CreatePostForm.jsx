@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './FormPost.css';
 
 const CreatePostForm = ({ onCreate }) => {
@@ -13,8 +13,6 @@ const CreatePostForm = ({ onCreate }) => {
     location: '',
     foundLost: '',
   });
-
-  
 
   const handleChange = (e) => {
     setFormData({
@@ -106,10 +104,14 @@ const CreatePostForm = ({ onCreate }) => {
       {/* URL da imagem */}
       <input
         name="image"
-        placeholder="URL da imagem"
-        value={formData.image}
-        onChange={handleChange}
-        type='file'
+        type="file"
+        accept="image/*"
+        onChange={(e) =>
+          setFormData({
+            ...formData,
+            image: e.target.files[0] // pega o arquivo
+          })
+        }
       />
 
       {/* Local no mapa */}
