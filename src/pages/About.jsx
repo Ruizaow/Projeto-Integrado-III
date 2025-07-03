@@ -3,13 +3,39 @@ import './About.css';
 import GPetsLogo from "../assets/gpets-logo.png";
 import ImagePlaceholder from "../assets/placeholder.svg";
 
+import Arrow1 from "../assets/About/Arrow1.png";
+import Arrow2 from "../assets/About/Arrow2.png";
+import Arrow3 from "../assets/About/Arrow3.png";
+import Arrow4 from "../assets/About/Arrow4.png";
+import Border1 from "../assets/About/Border1.png";
+import Border2 from "../assets/About/Border2.png";
+import Button1 from "../assets/About/Button1.png";
+import Button2 from "../assets/About/Button2.png";
+import GPets from "../assets/About/GPets.png";
+import Icon1 from "../assets/About/Icon1.png";
+import Icon2 from "../assets/About/Icon2.png";
+import Icon3 from "../assets/About/Icon3.png";
+import Particle1 from "../assets/About/Particle1.png";
+import Particle2 from "../assets/About/Particle2.png";
+import Particle3 from "../assets/About/Particle3.png";
+import Planet from "../assets/About/Planet.png";
+import Rocket1 from "../assets/About/Rocket1.png";
+import Rocket2 from "../assets/About/Rocket2.png";
+import Smoke1 from "../assets/About/Smoke1.png";
+import Smoke2 from "../assets/About/Smoke2.png";
+import Smoke3 from "../assets/About/Smoke3.png";
+import Smoke4 from "../assets/About/Smoke4.png";
+import Star1 from "../assets/About/Star1.png";
+import Star2 from "../assets/About/Star2.png";
+import Star3 from "../assets/About/Star3.png";
+
 const About = () => {
   // const [posts, setPosts] = useState([]);
 
   return (
     <div className="container">
         <div className="banner">
-            <img src={GPetsLogo} alt="GPets_Logo" />
+            <img src={GPetsLogo} />
         </div>
 
         <div className="about">
@@ -23,7 +49,7 @@ const About = () => {
                     de fazer a diferença, criamos essa ferramenta para unir forças com quem também quer ajudar. Porque
                     cuidar dos animais é, acima de tudo, um trabalho coletivo. </p>
             </div>
-            <img src={ImagePlaceholder} alt="Placeholder" />
+            <img src={ImagePlaceholder} />
         </div>
 
         <div className="values">
@@ -50,7 +76,120 @@ const About = () => {
         </div>
 
         <div className="explanation">
-            <p> texto </p>
+            <img className="img-border" style={{marginRight: "1000px"}}
+                src={Border1}
+            />
+            <div className="content">
+                <h1> Como o GPets funciona? </h1>
+                <div className="line-1">
+                    <h2> É aqui que você <br/>
+                         começa! </h2>
+                    <img className="img-arw-1" src={Arrow1} />
+                    <div className="column-1">
+                        <img className="img-part-1" src={Particle1} />
+                        <div className="button-1">
+                            <img className="btn-1" src={Button1} />
+                            <img className="btn-2" src={Button2} />
+                            <p> Fazer postagem </p>
+                        </div>
+                        <h3> Vá para a página de “<strong>Feed</strong>” e <br/>
+                             clique no botão inferior a <br/>
+                             esquerda “<strong>Postar</strong>” </h3>
+                    </div>
+                    <img className="img-arw-2" src={Arrow2} />
+                    <div className="column-2">
+                        <h2 style={{marginBottom: "-10px"}}> Você escolhe </h2>
+                        <div className="button-2">
+                            <p> Pet perdido </p>
+                        </div>
+                        <h2> ou </h2>
+                        <div className="button-2">
+                            <p> Pet em situação de rua </p>
+                        </div>
+                    </div>
+                    <div className="column-3">
+                        <p> Faça essa postagem caso o seu <br/>
+                            pet ou de um conhecido foi <br/>
+                            perdido. <strong> Foto, nome, sexo e <br/>
+                            local onde foi perdido</strong> são itens <br/>
+                            obrigatórios </p>
+                        <p> Faça essa postagem caso você <br/>
+                            tenha encontrado um pet em <br/>
+                            situação de rua. <strong> Foto, descrição <br/>
+                            e localização de onde foi <br/>
+                            encontrado</strong> são itens <br/>
+                            obrigatórios. </p>
+                    </div>
+                </div>
+                <div className="assets-1">
+                    <img src={Star1} />
+                    <h2> Agora é so postar... </h2>
+                </div>
+                <div className="line-2">
+                    <img className="img-rckt-1" src={Rocket1} />
+                    <img className="img-smoke-2" src={Smoke2} />
+                    <div className="column-4">
+                        <img src={Smoke1} />
+                        <div className="assets-2">
+                            <img className="img-star-3" src={Star3} />
+                            <img className="img-star-2" src={Star2} />
+                        </div>
+                    </div>
+                </div>
+                <div className="line-3">
+                    <div column-5>
+                        <img className="img-rckt-2" src={Rocket2} />
+                        <img className="img-smoke-4" src={Smoke4} />
+                        <img className="img-smoke-3" src={Smoke3} />
+                    </div>
+                    <img className="img-planet" src={Planet} />
+                </div>
+                <div className="line-4">
+                    <h2> Seu pedido vai ser <br/>
+                         visto pelos usuários </h2>
+                    <img src={Arrow3} />
+                </div>
+                <h3> Várias pessoas unidas num só lugar! </h3>
+                <div className="line-5">
+                    <div className="info-column">
+                        <div className="card">
+                            <img className="icon1" src={Icon1} />
+                        </div>
+                        <p> Podem trocar informações importantes dentro <br/>
+                            dos comentários da postagem ou compartilhar <br/>
+                            direto nas suas redes sociais.  </p>
+                    </div>
+                    <div className="info-column">
+                        <div className="card">
+                            <img className="icon2" src={Icon2} />
+                        </div>
+                        <p> Conectando pessoas de todos os lugares, <br/>
+                            ONGs, instituições veterinarias e clinicas. </p>
+                    </div>
+                    <div className="info-column">
+                        <div className="card">
+                            <img className="icon3" src={Icon3} />
+                        </div>
+                        <p> Pedindo ajuda a aqueles que estão mais <br/>
+                            próximas do local em que o pet foi <br/>
+                            avistado pela ultima vez. </p>
+                    </div>
+                </div>
+                <img src={Arrow4} />
+                <div className="line-6">
+                    <img src={Particle2} />
+                    <div className="button-3">
+                        <p> Resgate </p>
+                    </div>
+                    <img src={Particle3} />
+                </div>
+                <h2 className="final-message"> Assim, você e eu podemos ajudar aquele que mais precisa, da <br/>
+                     forma que conseguimos ajudar! </h2>
+                <img src={GPets} />
+            </div>
+            <img className="img-border" style={{marginLeft: "1000px"}}
+                src={Border2}
+            />
         </div>
     </div>
   );
