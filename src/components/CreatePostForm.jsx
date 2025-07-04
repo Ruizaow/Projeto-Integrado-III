@@ -6,12 +6,12 @@ const CreatePostForm = ({ onCreate }) => {
     name: '',
     sex: '',
     breed: '',
+    foundLost: '',
     owner: '',
     age: '',
     extra: '',
     image: '',
     location: '',
-    foundLost: '',
   });
 
   const handleChange = (e) => {
@@ -23,17 +23,18 @@ const CreatePostForm = ({ onCreate }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(formData);
     onCreate(formData);
     setFormData({
       name: '',
       sex: '',
       breed: '',
+      foundLost: '',
       owner: '',
       age: '',
       extra: '',
       image: '',
       location: '',
-      foundLost: '',
     });
   };
 
@@ -49,7 +50,7 @@ const CreatePostForm = ({ onCreate }) => {
       />
 
       {/* Sexo e Raça */}
-      <div className="flex gap-3 mb-3">
+      <div className="Sex">
         <select
           name="sex"
           value={formData.sex}
@@ -78,7 +79,7 @@ const CreatePostForm = ({ onCreate }) => {
       </div>
 
       {/* Tem dono e idade */}
-      <div className="flex gap-3 mb-3">
+      <div className="Owner-Age">
         <input
           name="owner"
           placeholder="Tem dono?"

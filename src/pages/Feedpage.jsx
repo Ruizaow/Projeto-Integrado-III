@@ -25,7 +25,7 @@ const FeedPage = () => {
             key={index}
             username="usuário"
             imageUrl={post.image}
-            description={`${post.name} - ${post.sex}, ${post.breed}. ${post.extra}`}
+            description={`${post.name} - ${post.sex}, ${post.breed}. ${post.foundLost}. ${post.owner}. ${post.age}. ${post.extra}`}
             onMapClick={() => alert(`Abrir mapa em: ${post.location}`)}
           />
         ))}
