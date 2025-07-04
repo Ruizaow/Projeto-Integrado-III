@@ -1,33 +1,38 @@
 // import { useState } from 'react';
 import './About.css';
-import GPetsLogo from "../assets/gpets-logo.png";
-import ImagePlaceholder from "../assets/placeholder.svg";
+import GPetsBlack from "../assets/gpets-logo.png";
+import Placeholder from "../assets/placeholder.svg";
+import Alert from "../assets/About/Alert.png"
+import User from "../assets/About/User.png"
+import Instagram from "../assets/About/Instagram.png"
+import GitHub from "../assets/About/GitHub.png"
+import Footer from "../assets/About/Footer.png"
 
-import Arrow1 from "../assets/About/Arrow1.png";
-import Arrow2 from "../assets/About/Arrow2.png";
-import Arrow3 from "../assets/About/Arrow3.png";
-import Arrow4 from "../assets/About/Arrow4.png";
-import Border1 from "../assets/About/Border1.png";
-import Border2 from "../assets/About/Border2.png";
-import Button1 from "../assets/About/Button1.png";
-import Button2 from "../assets/About/Button2.png";
-import GPets from "../assets/About/GPets.png";
-import Icon1 from "../assets/About/Icon1.png";
-import Icon2 from "../assets/About/Icon2.png";
-import Icon3 from "../assets/About/Icon3.png";
-import Particle1 from "../assets/About/Particle1.png";
-import Particle2 from "../assets/About/Particle2.png";
-import Particle3 from "../assets/About/Particle3.png";
-import Planet from "../assets/About/Planet.png";
-import Rocket1 from "../assets/About/Rocket1.png";
-import Rocket2 from "../assets/About/Rocket2.png";
-import Smoke1 from "../assets/About/Smoke1.png";
-import Smoke2 from "../assets/About/Smoke2.png";
-import Smoke3 from "../assets/About/Smoke3.png";
-import Smoke4 from "../assets/About/Smoke4.png";
-import Star1 from "../assets/About/Star1.png";
-import Star2 from "../assets/About/Star2.png";
-import Star3 from "../assets/About/Star3.png";
+import Arrow1 from "../assets/About/Explanation/Arrow1.png";
+import Arrow2 from "../assets/About/Explanation/Arrow2.png";
+import Arrow3 from "../assets/About/Explanation/Arrow3.png";
+import Arrow4 from "../assets/About/Explanation/Arrow4.png";
+import Border1 from "../assets/About/Explanation/Border1.png";
+import Border2 from "../assets/About/Explanation/Border2.png";
+import Button1 from "../assets/About/Explanation/Button1.png";
+import Button2 from "../assets/About/Explanation/Button2.png";
+import GPetsWhite from "../assets/About/Explanation/GPets.png";
+import Icon1 from "../assets/About/Explanation/Icon1.png";
+import Icon2 from "../assets/About/Explanation/Icon2.png";
+import Icon3 from "../assets/About/Explanation/Icon3.png";
+import Particle1 from "../assets/About/Explanation/Particle1.png";
+import Particle2 from "../assets/About/Explanation/Particle2.png";
+import Particle3 from "../assets/About/Explanation/Particle3.png";
+import Planet from "../assets/About/Explanation/Planet.png";
+import Rocket1 from "../assets/About/Explanation/Rocket1.png";
+import Rocket2 from "../assets/About/Explanation/Rocket2.png";
+import Smoke1 from "../assets/About/Explanation/Smoke1.png";
+import Smoke2 from "../assets/About/Explanation/Smoke2.png";
+import Smoke3 from "../assets/About/Explanation/Smoke3.png";
+import Smoke4 from "../assets/About/Explanation/Smoke4.png";
+import Star1 from "../assets/About/Explanation/Star1.png";
+import Star2 from "../assets/About/Explanation/Star2.png";
+import Star3 from "../assets/About/Explanation/Star3.png";
 
 const About = () => {
   // const [posts, setPosts] = useState([]);
@@ -35,7 +40,7 @@ const About = () => {
   return (
     <div className="container">
         <div className="banner">
-            <img src={GPetsLogo} />
+            <img src={GPetsBlack} />
         </div>
 
         <div className="about">
@@ -49,7 +54,7 @@ const About = () => {
                     de fazer a diferença, criamos essa ferramenta para unir forças com quem também quer ajudar. Porque
                     cuidar dos animais é, acima de tudo, um trabalho coletivo. </p>
             </div>
-            <img src={ImagePlaceholder} />
+            <img src={Placeholder} />
         </div>
 
         <div className="values">
@@ -76,7 +81,7 @@ const About = () => {
         </div>
 
         <div className="explanation">
-            <img className="img-border" style={{marginRight: "1000px"}}
+            <img className="img-border" style={{marginRight: "52.5rem"}}
                 src={Border1}
             />
             <div className="content">
@@ -175,7 +180,7 @@ const About = () => {
                             avistado pela ultima vez. </p>
                     </div>
                 </div>
-                <img src={Arrow4} />
+                <img className="img-arw-4" src={Arrow4} />
                 <div className="line-6">
                     <img src={Particle2} />
                     <div className="button-3">
@@ -185,12 +190,78 @@ const About = () => {
                 </div>
                 <h2 className="final-message"> Assim, você e eu podemos ajudar aquele que mais precisa, da <br/>
                      forma que conseguimos ajudar! </h2>
-                <img src={GPets} />
+                <img src={GPetsWhite} />
             </div>
-            <img className="img-border" style={{marginLeft: "1000px"}}
+            <img className="img-border" style={{marginLeft: "52.5rem"}}
                 src={Border2}
             />
         </div>
+
+        <div className="alertBar">
+            <div className="bar">
+                <div className="content">
+                    <img src={Alert} />
+                </div>
+            </div>
+        </div>
+
+        <div className="contentInfo">
+            <div className="history">
+                <div className="interface">
+                    <img src={User} />
+                </div>
+                <div className="info">
+                    <h1> história comovente </h1>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque <br/>
+                        elit metus, tincidunt ut orci nec, faucibus feugiat ante. Maecenas <br/>
+                        cursus libero quam, non aliquet lacus sodales ut </p>
+                </div>
+            </div>
+            <div className="select">
+                <div className="selectedCircle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+            </div>
+        </div>
+
+        <div className="faq">
+            <div className="questions">
+                <h1> Perguntas </h1>
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+            </div>
+            <div className="interface">
+                <img src={User} />
+            </div>
+        </div>
+
+        <div className="help">
+            <h1> Outras formas de ajudar </h1>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elit metus, <br/>
+                tincidunt ut orci nec, faucibus feugiat ante. Maecenas cursus libero quam, non <br/>
+                aliquet lacus sodales ut </p>
+            <div className="images">
+                <div className="card"></div>
+                <div className="card"></div>
+                <div className="card"></div>
+            </div>
+        </div>
+
+        <footer>
+            <div className="info">
+                <h1> GPets </h1>
+                <p> contato </p>
+                <p> faça doações para o projeto! </p>
+                <p> parcerias </p>
+                <img className="img-insta" src={Instagram} />
+                <img className="img-git" src={GitHub} />
+            </div>
+            <div className="contact">
+                <p> XXXXXXXXXXXX  </p>
+            </div>
+        </footer>
     </div>
   );
 };
