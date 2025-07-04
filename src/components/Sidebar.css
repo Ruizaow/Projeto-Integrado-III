@@ -1,4 +1,14 @@
 /* ====================== */
+/* TIPOGRAFIA DA PAG */
+/* ====================== */
+* {
+    font-family: "Geologica", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* ====================== */
 /* ESTRUTURA PRINCIPAL */
 /* ====================== */
 .sidebar {
@@ -135,7 +145,7 @@
 /* ====================== */
 .sidebar-footer {
   margin-top: auto;
-  padding-top: 180px;
+  padding-top: 140px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   width: 100%;
 }
@@ -159,7 +169,8 @@
 .publish-button {
   width: calc(100% - 40px);
   margin: 0 auto;
-  padding: 16px;
+  margin-top: 20PX;
+  padding: 25px;
   background: #323A42;
   color: white;
   border: none;
@@ -168,7 +179,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
   transition: all 0.3s;
   overflow: hidden;
 }
@@ -185,6 +196,7 @@
   border-radius: 50%;
   padding: 0;
   margin: 0 auto;
+  margin-top: 20PX;
   display: flex;
   justify-content: center;
   align-items: center;
