@@ -51,7 +51,7 @@ function Map() {
   }
 
   return (
-    <MapContainer center={[-4.9708, -39.0150]} zoom={16}>
+    <MapContainer center={[-4.9708, -39.0150]} zoom={16} className="map-container">
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

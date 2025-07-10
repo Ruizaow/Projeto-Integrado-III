@@ -12,8 +12,8 @@ import {
 } from 'react-icons/fi';
 import './Sidebar.css';
 
-const Sidebar = () => {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+const Sidebar = ({ onOpenForm }) => {
+  const [isCollapsed, setIsCollapsed] = useState(true);
 
   const menuItems = [
     { icon: <FiHome size={20} />, label: 'Mapa Aberto', path: '/' },
@@ -32,18 +32,9 @@ const Sidebar = () => {
   const toggleSidebar = () => setIsCollapsed(!isCollapsed);
 
   return (
-    <div className={`sidebar ${isCollapsed ? 'collapsed' : ''}`}>
-      {/* Botão de Toggle */}
-      <button onClick={toggleSidebar} className="toggle-btn">
-        {isCollapsed ? (
-          <FiMenu size={25} />
-        ) : (
-          <FiX size={25} />
-        )}
-      </button>
-
+    <div className="sidebar">
       {/* Conteúdo Principal */}
-      <nav className="sidebar-nav">
+      <nav className={`sidebar-nav ${isCollapsed ? 'collapsed' : ''}`}>
         <ul>
           {/* Itens do Menu Principal */}
           {menuItems.map((item, index) => (
@@ -57,7 +48,7 @@ const Sidebar = () => {
 
           {/* Botão de Publicação */}
           <li className="publish-button-container">
-            <button className="publish-button">
+            <button className="publish-button" onClick={onOpenForm}>
               <FiPlus size={18} />
               {!isCollapsed && <span>Nova Publicação</span>}
             </button>
@@ -77,6 +68,14 @@ const Sidebar = () => {
           )}
         </ul>
       </nav>
+      {/* Botão de Toggle */}
+      <button onClick={toggleSidebar} className={`toggle-btn ${!isCollapsed ? 'expanded' : ''}`}>
+        {isCollapsed ? (
+          <FiMenu size={25} />
+        ) : (
+          <FiX size={25} />
+        )}
+      </button>
     </div>
   );
 };

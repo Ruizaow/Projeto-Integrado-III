@@ -1,7 +1,7 @@
 import './navbar.css' // nao esquecer do ponto barra
-import logo from '../src/assets/marca.svg'
-import perfil from './assets/perfil.svg'
-import sino from './assets/sino.svg'
+import logo from '../assets/marca.svg'
+import perfil from '../assets/perfil.svg'
+import sino from '../assets/sino.svg'
 
 export default function Navbar(){
     return (

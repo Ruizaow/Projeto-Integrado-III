@@ -6,7 +6,6 @@ import Alert from "../assets/About/Alert.png"
 import User from "../assets/About/User.png"
 import Instagram from "../assets/About/Instagram.png"
 import GitHub from "../assets/About/GitHub.png"
-import Footer from "../assets/About/Footer.png"
 
 import Arrow1 from "../assets/About/Explanation/Arrow1.png";
 import Arrow2 from "../assets/About/Explanation/Arrow2.png";
