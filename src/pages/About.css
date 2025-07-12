@@ -94,10 +94,11 @@ html {
     padding: 6.875rem;
     display: flex;
     justify-content: center;
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
     .img-border {
         position: absolute;
         margin-top: 2.5rem;
+        height: 106.5rem;
     }
     .content {
         display: flex;
@@ -123,8 +124,8 @@ html {
                 font-family: "Lemonada";
                 font-weight: 300;
                 font-size: 1rem;
-                color: #FFF;
                 text-align: center;
+                color: #FFF;
                 transform: rotate(-18.58deg) translateX(6.8rem);
                 margin-top: 3.5rem;
             }
@@ -165,8 +166,9 @@ html {
                     font-family: "League Spartan";
                     font-weight: 400;
                     font-size: 1rem;
+                    text-align: center;
                     color: #FFF;
-                    margin-left: -1.875rem;
+                    margin-left: -1.8rem;
                     margin-top: 1.25rem;
                 }
             }
@@ -180,42 +182,61 @@ html {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                gap: 0.625rem;
-
+                gap: 0.2rem;
+                p {
+                    font-family: "League Spartan";
+                    font-style: normal;
+                    font-size: 1.25rem;
+                    color: #4C4C4C;
+                    white-space: nowrap;
+                }
                 h2 {
                     transform: rotate(0deg);
                     margin: 0;
                 }
                 .button-2 {
-                    background-color: #FFF;
-                    text-align: center;
-                    width: 14.375rem;
-                    height: 4.0625rem;
-                    border-radius: 1.48875rem;
-                    box-shadow: 0 0.135625rem 0.135625rem rgba(0, 0, 0, 0.25);
-
                     display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    text-align: center;
+                    margin-bottom: -0.5rem;
+                    .btn-3 {
+                        
+                        margin-top: 0.5rem;
+                    }
+                    .btn-4 {
+                        position: absolute;
+                    }
                     p {
-                        font-family: "League Spartan";
-                        font-style: normal;
-                        font-size: 1.25rem;
-                        color: #4C4C4C;
-                        white-space: nowrap;
+                        position: absolute;
+                        margin-left: 1.9rem;
+                        margin-top: 1.6rem;
+                        z-index: 1;
+                    }
+                }
+                .button-3 {
+                    display: flex;
+                    .btn-5 {
+                        
+                        margin-top: 0.5rem;
+                    }
+                    .btn-6 {
+                        position: absolute;
+                    }
+                    p {
+                        position: absolute;
+                        margin-left: 0.7rem;
+                        margin-top: 1.7rem;
+                        z-index: 1;
                     }
                 }
             }
             .column-3 {
                 display: flex;
                 flex-direction: column;
-                gap: 2.5rem;
+                gap: 2rem;
                 margin-top: 1.8rem;
                 p {
                     font-family: "League Spartan";
                     font-style: normal;
-                    font-size: 0.75rem;
+                    font-size: 1rem;
                     color: #FFF;
                 }
             }
@@ -224,7 +245,7 @@ html {
         .assets-1 {
             display: flex;
             gap: 1rem;
-            margin-left: 9rem;
+            margin-left: 5rem;
             img {
                 width: 2.251rem;
                 height: 2.314rem;
@@ -238,7 +259,7 @@ html {
         }
 
         .line-2 {
-            margin-left: 11rem;
+            margin-left: 7rem;
             margin-top: 0.5rem;
             position: relative;
             .img-rckt-1 {
@@ -276,7 +297,7 @@ html {
         .line-3 {
             display: flex;
             margin-top: -4rem;
-            margin-left: -28rem;
+            margin-left: -32rem;
             margin-bottom: 1.4rem;
             .img-rckt-2 {
                 margin-bottom: -5rem;
@@ -298,8 +319,8 @@ html {
 
         .line-4 {
             display: flex;
-            margin-left: -19.2rem;
-            margin-bottom: 3.6rem;
+            margin-left: -23.2rem;
+            margin-bottom: 3.5rem;
             gap: 4rem;
             h2 {
                 font-family: "Lemonada";
@@ -313,7 +334,7 @@ html {
             font-family: "Lemonada";
             font-weight: 400;
             font-size: 1rem;
-            color: #4C4C4C;
+            color: #FFF;
             margin-bottom: 1.5rem;
         }
 
@@ -324,6 +345,7 @@ html {
             .info-column {
                 display: flex;
                 flex-direction: column;
+                align-items: center;
                 gap: 1.5rem;
                 .card {
                     display: flex;
@@ -350,36 +372,53 @@ html {
                 p {
                     font-family: "League Spartan";
                     font-style: normal;
-                    font-size: 0.75rem;
+                    font-size: 1rem;
                     text-align: center;
-                    color: #4C4C4C;
+                    color: #FFF;
                 }
             }
         }
 
         .img-arw-4 {
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .line-6 {
             display: flex;
             gap: 0.5rem;
-            margin-bottom: 4rem;
+            margin-bottom: 2rem;
             .button-3 {
                 display: flex;
+                flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 background-color: #FFF;
-                border-radius: 2.567rem;
+                border-radius: 0.5rem;
                 width: 19.717rem;
-                height: 7rem;
+                height: 11.5rem;
                 box-shadow: 0 0.233rem 0.233rem rgba(0, 0, 0, 0.25);
+                .animals-icon {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 1rem;
+                    .cat {
+                        width: 5.933rem;
+                        height: 5.933rem;
+                    }
+                    .dog {
+                        width: 4.497rem;
+                        height: 5.103rem;
+                    }
+                }
                 p {
                     font-family: "Lemonada";
                     font-style: bold;
                     font-weight: 700;
-                    font-size: 2.031rem;
+                    font-size: 2rem;
+                    text-align: center;
                     color: #0879D9;
+                    line-height: 1.2;
+                    margin-top: -0.6rem;
                 }
             }
             img {
@@ -404,7 +443,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 25rem;
+    margin-bottom: 20rem;
 
     .bar {
         display: flex;

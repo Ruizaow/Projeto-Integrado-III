@@ -7,6 +7,8 @@ import User from "../assets/About/User.png"
 import Instagram from "../assets/About/Instagram.png"
 import GitHub from "../assets/About/GitHub.png"
 
+import Animal1 from "../assets/About/Explanation/Animal1.png";
+import Animal2 from "../assets/About/Explanation/Animal2.png";
 import Arrow1 from "../assets/About/Explanation/Arrow1.png";
 import Arrow2 from "../assets/About/Explanation/Arrow2.png";
 import Arrow3 from "../assets/About/Explanation/Arrow3.png";
@@ -15,6 +17,10 @@ import Border1 from "../assets/About/Explanation/Border1.png";
 import Border2 from "../assets/About/Explanation/Border2.png";
 import Button1 from "../assets/About/Explanation/Button1.png";
 import Button2 from "../assets/About/Explanation/Button2.png";
+import Button3 from "../assets/About/Explanation/Button3.png";
+import Button4 from "../assets/About/Explanation/Button4.png";
+import Button5 from "../assets/About/Explanation/Button5.png";
+import Button6 from "../assets/About/Explanation/Button6.png";
 import GPetsWhite from "../assets/About/Explanation/GPets.png";
 import Icon1 from "../assets/About/Explanation/Icon1.png";
 import Icon2 from "../assets/About/Explanation/Icon2.png";
@@ -102,17 +108,22 @@ const About = () => {
                     </div>
                     <img className="img-arw-2" src={Arrow2} />
                     <div className="column-2">
-                        <h2 style={{marginBottom: "-10px"}}> Você escolhe </h2>
+                        <h2> Você escolhe </h2>
                         <div className="button-2">
+                            <img className="btn-3" src={Button3} />
+                            <img className="btn-4" src={Button4} />
                             <p> Pet perdido </p>
                         </div>
                         <h2> ou </h2>
-                        <div className="button-2">
+                        <div className="button-3">
+                            <img className="btn-5" src={Button5} />
+                            <img className="btn-6" src={Button6} />
                             <p> Pet em situação de rua </p>
                         </div>
                     </div>
                     <div className="column-3">
-                        <p> Faça essa postagem caso o seu <br/>
+                        <p style={{marginLeft: "-2rem"}}>
+                            Faça essa postagem caso o seu <br/>
                             pet ou de um conhecido foi <br/>
                             perdido. <strong> Foto, nome, sexo e <br/>
                             local onde foi perdido</strong> são itens <br/>
@@ -159,36 +170,44 @@ const About = () => {
                         <div className="card">
                             <img className="icon1" src={Icon1} />
                         </div>
-                        <p> Podem trocar informações importantes dentro <br/>
-                            dos comentários da postagem ou compartilhar <br/>
-                            direto nas suas redes sociais.  </p>
+                        <p> Podem trocar informações <br/>
+                            importantes dentro dos <br/>
+                            comentários da postagem ou <br/>
+                            compartilhar direto nas suas <br/>
+                            redes sociais.  </p>
                     </div>
                     <div className="info-column">
                         <div className="card">
                             <img className="icon2" src={Icon2} />
                         </div>
-                        <p> Conectando pessoas de todos os lugares, <br/>
-                            ONGs, instituições veterinarias e clinicas. </p>
+                        <p> Conectando pessoas de todos <br/>
+                            os lugares, ONGs, instituições <br/>
+                            veterinarias e clinicas. </p>
                     </div>
                     <div className="info-column">
                         <div className="card">
                             <img className="icon3" src={Icon3} />
                         </div>
-                        <p> Pedindo ajuda a aqueles que estão mais <br/>
-                            próximas do local em que o pet foi <br/>
-                            avistado pela ultima vez. </p>
+                        <p> Pedindo ajuda a aqueles que <br/>
+                            estão mais próximos do local <br/>
+                            em que o pet foi avistado <br/>
+                            pela ultima vez. </p>
                     </div>
                 </div>
                 <img className="img-arw-4" src={Arrow4} />
                 <div className="line-6">
                     <img src={Particle2} />
                     <div className="button-3">
-                        <p> Resgate </p>
+                        <div className="animals-icon">
+                            <img className="cat" src={Animal1} />
+                            <img className="dog" src={Animal2} />
+                        </div>
+                        <p> Ajude a <br/>Resgatar </p>
                     </div>
                     <img src={Particle3} />
                 </div>
-                <h2 className="final-message"> Assim, você e eu podemos ajudar aquele que mais precisa, da <br/>
-                     forma que conseguimos ajudar! </h2>
+                <h2 className="final-message"> Assim, você e eu podemos ajudar aquele que <br/>
+                     mais precisa, forma que conseguimos ajudar! </h2>
                 <img src={GPetsWhite} />
             </div>
             <img className="img-border" style={{marginLeft: "52.5rem"}}
