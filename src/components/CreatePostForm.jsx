@@ -59,6 +59,7 @@ const CreatePostForm = ({ onCreate }) => {
           <option value="">Selecione o sexo</option>
           <option value="masculino">Masculino</option>
           <option value="feminino">Feminino</option>
+          <option value="não sei">Não sei</option>
         </select>
         <input
           name="breed"
@@ -70,22 +71,32 @@ const CreatePostForm = ({ onCreate }) => {
 
       {/* Pet perdido ou encontrado */}
       <div className='Found'>
-        <input
+        <select
           name="foundLost"
-          placeholder="Encontrado/Perdido"
-          value={formData.foundLost}
+          value={formData.owner}
           onChange={handleChange}
-        />
+        >
+          <option value="">Encontrado/perdido</option>
+          <option value="perdido">Perdido</option>
+          <option value="rua">Pet em situação de rua</option>
+        </select>
+
       </div>
 
       {/* Tem dono e idade */}
       <div className="Owner-Age">
-        <input
+          
+        <select
           name="owner"
-          placeholder="Tem dono?"
           value={formData.owner}
           onChange={handleChange}
-        />
+        >
+          <option value="">Tem Dono?</option>
+          <option value="Não">Não</option>
+          <option value="sim">Sim</option>
+          <option value="não sei">Não Sei</option>
+        </select>
+
         <input
           name="age"
           placeholder="Idade"
