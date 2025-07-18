@@ -1,0 +1,120 @@
+@media (min-width: 7680px) {
+  .map-container.minimized {
+    width: 410rem;
+    height: 220rem;
+  }
+}
+@media (max-width: 6440px) {
+  .map-container.minimized {
+    width: 334rem;
+    height: 176rem;
+  }
+}
+@media (max-width: 5840px) {
+  .map-container.minimized {
+    width: 292rem;
+    height: 164rem;
+  }
+}
+@media (max-width: 5000px) {
+  .map-container.minimized {
+    width: 234rem;
+    height: 130rem;
+  }
+}
+@media (max-width: 3840px) {
+  .map-container.minimized {
+    width: 173rem;
+    height: 100rem;
+  }
+}
+@media (max-width: 3280px) {
+  .map-container.minimized {
+    width: 135rem;
+    height: 80rem;
+  }
+}
+@media (max-width: 3000px) {
+  .map-container.minimized {
+    width: 121rem;
+    height: 76rem;
+  }
+}
+@media (max-width: 2880px) {
+  .map-container.minimized {
+    width: 113rem;
+    height: 74rem;
+  }
+}
+@media (max-width: 2760px) {
+  .map-container.minimized {
+    width: 107rem;
+    height: 66rem;
+  }
+}
+@media (max-width: 2560px) {
+  .map-container.minimized {
+    width: 94rem;
+    height: 62rem;
+  }
+}
+@media (max-width: 2400px) {
+  .map-container.minimized {
+    width: 84rem;
+    height: 58rem;
+  }
+}
+@media (max-width: 2300px) {
+  .map-container.minimized {
+    width: 75rem;
+    height: 54rem;
+  }
+}
+@media (max-width: 2220px) {
+  .map-container.minimized {
+    width: 68rem;
+    height: 50rem;
+  }
+}
+@media (max-width: 1920px) {
+  .map-container.minimized {
+    width: 54rem;
+    height: 44rem;
+  }
+}
+@media (max-width: 1760px) {
+  .map-container.minimized {
+    width: 44rem;
+    height: 40rem;
+  }
+}
+@media (max-width: 1640px) {
+  .map-container.minimized {
+    width: 38rem;
+    height: 38rem;
+  }
+}
+@media (max-width: 1540px) {
+  .map-container.minimized {
+    width: 31rem;
+    height: 34rem;
+  }
+}
+@media (max-width: 1440px) {
+  .map-container.minimized {
+    width: 22rem;
+    height: 30rem;
+  }
+}
+@media (max-width: 1360px) {
+  .map-container.minimized {
+    width: 20rem;
+    height: 26rem;
+  }
+}
+@media (max-width: 1280px) {
+  .map-container.minimized {
+    width: 14rem;
+    height: 28rem;
+  }
+}

@@ -1,9 +1,8 @@
-import React from 'react';
-import './PostAnimal.css';
+import './styles/PostAnimal.css';
 
 const PostAnimal = () => {
   return (
-    <div className="post-card">
+    <div className="postAnimal-card">
       <h1 className="titulo">Animal Perdido</h1>
 
       <div className="foto-container">

@@ -1,80 +1,81 @@
-import { useState } from 'react';
-import {
-  FiHome,
-  FiUser,
-  FiFolder,
-  FiFilter,
-  FiSettings,
-  FiMessageSquare,
-  FiPlus,
-  FiMenu,
-  FiX,
-} from 'react-icons/fi';
-import './Sidebar.css';
+import { useNavigate } from 'react-router-dom';
+import { FiMenu, FiX, } from 'react-icons/fi';
+import About from "../assets/FeedPage/Sidebar/About.svg";
+import OpenMap from "../assets/FeedPage/Sidebar/OpenMap.svg";
+import Feed from "../assets/FeedPage/Sidebar/Feed.svg";
+import Filter from "../assets/FeedPage/Sidebar/Filter.svg";
+import Bookmark from "../assets/FeedPage/Sidebar/Bookmark.svg";
+import Configuration from "../assets/FeedPage/Sidebar/Configuration.svg";
+import Plus from "../assets/FeedPage/Sidebar/Plus.svg";
+import './styles/Sidebar.css';
 
-const Sidebar = ({ onOpenForm }) => {
-  const [isCollapsed, setIsCollapsed] = useState(true);
-
+const Sidebar = ({ isCollapsed, setIsCollapsed, onCreatePost }) => {
+  const navigate = useNavigate();
+  
   const menuItems = [
-    { icon: <FiHome size={20} />, label: 'Mapa Aberto', path: '/' },
-    { icon: <FiUser size={20} />, label: 'Feed', path: '/profile' },
-    { icon: <FiFilter size={20} />, label: 'Filtro', path: '/filter' },
-    { icon: <FiMessageSquare size={20} />, label: 'Mensagem', path: '/messages' },
-    { icon: <FiFolder size={20} />, label: 'Pasta', path: '/folder' },
-    { icon: <FiSettings size={20} />, label: 'Configurações', path: '/settings' }
+    { icon: <img src={About}       style={{width: "20px", height: "20px"}}/>, label: 'Sobre Nós', path: '/about' },
+    { icon: <img src={OpenMap}       style={{width: "20px", height: "20px"}}/>, label: 'Mapa Aberto', path: '/openMap' },
+    { icon: <img src={Feed}          style={{width: "20px", height: "20px"}}/>, label: 'Feed', path: '/' },
+    { icon: <img src={Filter}        style={{width: "20px", height: "20px"}}/>, label: 'Filtro', path: '/' },
+    { icon: <img src={Bookmark}      style={{width: "20px", height: "20px"}}/>, label: 'Pasta', path: '/' },
+    { icon: <img src={Configuration} style={{width: "20px", height: "20px"}}/>, label: 'Configurações', path: '/' }
   ];
 
   const footerItems = [
-    { label: 'Sobre nós', path: '/about' },
     { label: 'Precisa de ajuda?', path: '/help' }
   ];
 
   const toggleSidebar = () => setIsCollapsed(!isCollapsed);
 
   return (
-    <div className="sidebar">
+    <div className="sidebar-container">
       {/* Conteúdo Principal */}
       <nav className={`sidebar-nav ${isCollapsed ? 'collapsed' : ''}`}>
         <ul>
-          {/* Itens do Menu Principal */}
-          {menuItems.map((item, index) => (
-            <li key={`menu-${index}`}>
-              <a href={item.path} className="nav-item">
-                <span className="nav-icon">{item.icon}</span>
-                {!isCollapsed && <span className="nav-label">{item.label}</span>}
-              </a>
+          <div className="upper-sidebar">
+            {/* Itens do Menu Principal */}
+            {menuItems.map((item, index) => (
+              <li key={`menu-${index}`}>
+                <button className="nav-item" onClick={() => navigate(item.path)}>
+                  <span className="nav-icon">{item.icon}</span>
+                  {!isCollapsed && <span className="nav-label">{item.label}</span>}
+                </button>
+              </li>
+            ))}
+
+            {/* Botão de Publicação */}
+            <li className="publish-button-container">
+              <button className="publish-button" onClick={onCreatePost}>
+                <img src={Plus} style={{width: "14px", height: "14px"}}/>
+                {!isCollapsed && <span>Nova Publicação</span>}
+              </button>
             </li>
-          ))}
-
-          {/* Botão de Publicação */}
-          <li className="publish-button-container">
-            <button className="publish-button" onClick={onOpenForm}>
-              <FiPlus size={18} />
-              {!isCollapsed && <span>Nova Publicação</span>}
-            </button>
-          </li>
-
-          {/* Itens do Footer (apenas quando expandido) */}
-          {!isCollapsed && (
-            <div className="sidebar-footer">
-              {footerItems.map((item, index) => (
-                <li key={`footer-${index}`}>
-                  <a href={item.path} className="footer-item">
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </div>
-          )}
+          </div>
+          <div className="bottom-sidebar">
+            {/* Itens do Footer (apenas quando expandido) */}
+            {!isCollapsed && (
+              <div className="sidebar-footer">
+                {footerItems.map((item, index) => (
+                  <li key={`footer-${index}`}>
+                    <button className="footer-item" onClick={() => navigate(item.path)}>
+                      {item.label}
+                    </button>
+                  </li>
+                ))}
+              </div>
+            )}
+          </div>
         </ul>
       </nav>
       {/* Botão de Toggle */}
-      <button onClick={toggleSidebar} className={`toggle-btn ${!isCollapsed ? 'expanded' : ''}`}>
-        {isCollapsed ? (
-          <FiMenu size={25} />
-        ) : (
-          <FiX size={25} />
-        )}
+      <button
+        onClick={toggleSidebar}
+        className={`toggle-btn ${!isCollapsed ? 'expanded' : ''}`}>
+          {isCollapsed ? (
+            <FiMenu size={25} />
+          ) : (
+            <FiX size={25} />
+          )}
       </button>
     </div>
   );

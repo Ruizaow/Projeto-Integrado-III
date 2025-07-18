@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #F7E9DA;
+    height: 100vh;
+
+    .visible-navbar {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    .occult-navbar {
+        opacity: 0;
+    }
+
+    .page-info {
+        display: flex;
+
+        .sidebar-component {
+            position: fixed;
+            z-index: 100;
+        }
+    }
+}
