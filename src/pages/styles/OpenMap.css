@@ -1,0 +1,22 @@
+body {
+  overflow: hidden;
+}
+
+.openMap-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #F7E9DA;
+
+  .page-info {
+    display: flex;
+
+    .sidebar-component {
+      position: absolute;
+      z-index: 100;
+    }
+    .map-component {
+      width: 100%;
+      z-index: 10;
+    }
+  }
+}

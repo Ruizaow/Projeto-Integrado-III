@@ -1,0 +1,109 @@
+.popup-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+
+    .popup-box {
+        border-radius: 32px;
+
+        font-family: "Geologica", sans-serif;
+        color: #323A42;
+
+        padding-top: 80px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 50px;
+
+        background-color: #FFF;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        
+        h2 {
+            font-size: 32px;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        h3 {
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+
+        .error-message {
+            font-size: 18px;
+            font-weight: bold;
+            color: #FF6B6B;
+            margin-bottom: 1rem;
+        }
+        
+        .tag-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            margin-bottom: 100px;
+
+            .row {
+                display: flex;
+                gap: 8px;
+                button {
+                    width: 211.2px;
+                    height: 64.9px;
+
+                    border-radius: 29.5px;
+                    border: 1px solid #000;
+                    background-color: #FBB51B;
+
+                    font-family: "Geologica", sans-serif;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    color: #323A42;
+
+                    cursor: pointer;
+                    transition: background-color 0.2s;
+                }
+                button.selected {
+                    background-color: #F47C48;
+                }
+            }
+        }
+
+        .close-buttons {
+            display: flex;
+            justify-content: end;
+            gap: 12px;
+
+            button {
+                width: 218px;
+                height: 64px;
+                border-radius: 8px;
+                border: none;
+
+                font-family: "Geologica", sans-serif;
+                font-size: 1rem;
+                font-weight: 700;
+                color: #FFF;
+                
+                cursor: pointer;
+                transition: background-color 0.2s;
+            }
+
+            .cancel-btn {
+                background-color: #FF6B6B;
+            }
+            .cancel-btn:hover {
+                background-color: #912626;
+            }
+            .confirm-btn {
+                background-color: #0879D9;
+            }
+            .confirm-btn:hover {
+                background-color: #0F4676;
+            }
+        }
+    }
+}
