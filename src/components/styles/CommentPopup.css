@@ -1,0 +1,65 @@
+.popup {
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  font-family: sans-serif;
+}
+
+.comment-list {
+  max-height: 200px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+/* Estilo dos balões de comentário */
+.comment-bubble {
+  background-color: #e0e0e0;
+  border-radius: 16px;
+  padding: 12px;
+  position: relative;
+  word-wrap: break-word;
+  min-height: 50px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* Ícone no canto */
+.comment-bubble::after {
+  content: "💬";
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 14px;
+}
+
+/* Área de escrita */
+textarea {
+  width: 100%;
+  min-height: 60px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+/* Botões */
+.popup button {
+  margin-top: 8px;
+  margin-right: 8px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+}
+
+.popup button:last-child {
+  background-color: #6c757d;
+}

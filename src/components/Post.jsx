@@ -3,6 +3,8 @@ import UserIcon from "../assets/FeedPage/Feed/User.svg";
 import Comment from "../assets/FeedPage/Feed/Comment.svg";
 import Bookmark from "../assets/FeedPage/Feed/Bookmark.svg";
 import Share from "../assets/FeedPage/Feed/Share.svg";
+import CommentPopup from './coments.jsx';
+
 
 const Post = ({ username, timestamp, foundLost, name, age, breed,
                 sex, owner, date, extraDescription, imageUrl, onMapClick
@@ -50,7 +52,7 @@ const Post = ({ username, timestamp, foundLost, name, age, breed,
             Ir para o mapa
         </button>
         <div className="actions">
-          <img src={Comment} />
+          <CommentPopup trigger={<img src={Comment} style={{ cursor: "pointer" }} alt="Comentar" />}/>
           <img src={Bookmark} />
           <img src={Share} />
         </div>
