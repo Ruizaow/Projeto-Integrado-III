@@ -1,0 +1,214 @@
+/* ====================== */
+/* VARIÁVEIS DE CORES E FONTES */
+/* ====================== */
+:root {
+  --cor-destaque: #E86D00;
+  --cor-texto: #564033;
+  --cor-texto-claro: #f5f5f5;
+  --cor-fundo-form: #f5f5f5;
+  --fonte-titulo: 'Arial Black', sans-serif;
+  --fonte-texto: 'League Spartan', sans-serif;
+}
+
+/* ====================== */
+/* ESTILOS GERAIS */
+/* ====================== */
+body {
+  font-family: var(--fonte-texto);
+}
+
+/* ====================== */
+/* FORMULÁRIO */
+/* ====================== */
+.form-container {
+  background: var(--cor-fundo-form);
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+/* ====================== */
+/* POSTER */
+/* ====================== */
+.poster-container {
+  position: relative;
+  width: 600px;
+  height: auto;
+  min-height: 800px;
+  margin: 20px auto;
+  padding-bottom: 30px;
+}
+
+.poster-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.poster-content {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  max-width: 80%;
+}
+
+/* ====================== */
+/* ELEMENTOS DO POSTER */
+/* ====================== */
+/* Estilos de texto base */
+.poster-content strong {
+  font-weight: 900;
+  font-family: var(--fonte-titulo);
+}
+
+.poster-content span {
+  font-weight: 500;
+  font-family: var(--fonte-texto);
+}
+
+/* Título principal */
+.poster-nome {
+  font-size: 42px;
+  text-align: center;
+  color: var(--cor-destaque);
+  margin: 10px 0;
+  font-family: var(--fonte-titulo);
+  line-height: 1.2;
+}
+
+/* Contato */
+.poster-contato {
+  font-size: 15px;
+  text-align: left;
+  color: var(--cor-texto);
+  margin: 8px 0;
+  font-family: var(--fonte-titulo);
+  line-height: 1.2;
+}
+
+/* Descrição */
+.poster-descricao {
+  font-size: 15px;
+  text-align: justify;
+  color: var(--cor-texto);
+  margin: 5px 0;
+  font-family: var(--fonte-titulo);
+  line-height: 1;
+  width: 500px;
+  height: 92px;
+  overflow-y: auto;
+  max-width: 500px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  white-space: normal;
+  text-align: left;
+}
+
+.poster-descricao strong {
+  display: inline;
+}
+
+.poster-descricao span {
+  display: inline;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+/* Data da última visualização */
+.poster-ultima-vista {
+  font-size: 15px;
+  color: var(--cor-texto);
+  margin: 6px 0;
+  font-family: var(--fonte-texto);
+}
+
+/* Container para sexo e idade */
+.poster-sexo-idade-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 8px 0;
+}
+
+/* Sexo e idade */
+.poster-sexo,
+.poster-idade {
+  font-size: 15px;
+  text-align: justify;
+  color: var(--cor-texto);
+  margin: 0 !important;
+  white-space: nowrap;
+  font-family: var(--fonte-titulo);
+  line-height: 1;
+}
+
+.poster-idade {
+  line-height: 1.2;
+}
+
+/* Local */
+.poster-local {
+  font-size: 15px;
+  text-align: center;
+  color: var(--cor-texto);
+  margin: 10px 0;
+  font-family: var(--fonte-titulo);
+  line-height: 1.2;
+}
+
+/* ====================== */
+/* IMAGEM DO ANIMAL */
+/* ====================== */
+.animal-image-container {
+  width: 465px;
+  height: 315px;
+  border-radius: 30px;
+  margin: 92px 0 0 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+  display: block;
+}
+
+/* ====================== */
+/* MEDIA QUERIES (RESPONSIVO) */
+/* ====================== */
+@media (max-width: 768px) {
+  .poster-container {
+    width: 100%;
+    padding: 15px;
+  }
+  
+  .poster-content {
+    left: 30px;
+    max-width: 85%;
+  }
+  
+  .poster-descricao {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .animal-image-container {
+    width: 90%;
+    margin: 30px auto;
+  }
+  
+  .poster-sexo-idade-container {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .poster-local {
+    margin: 60px 0;
+  }
+}
