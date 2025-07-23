@@ -1,0 +1,280 @@
+/* ====================== */
+/* VARIÁVEIS DE CORES E FONTES */
+/* ====================== */
+:root {
+  --cor-destaque: #E86D00;
+  --cor-texto: #564033;
+  --cor-texto-claro: #f5f5f5;
+  --cor-fundo-form: #f5f5f5;
+  --fonte-titulo: 'Arial Black', sans-serif;
+  --fonte-texto: 'League Spartan', sans-serif;
+}
+
+/* ====================== */
+/* POSTER */
+/* ====================== */
+.poster-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.poster-modal {
+  transform: scale(0.7);
+
+  position: relative;
+  width: 600px;
+  height: auto;
+  min-height: 800px;
+  margin: 20px auto;
+  padding-bottom: 30px;
+  font-family: var(--fonte-texto);
+  margin-bottom: -150px; /* Traz os botões para mais perto */
+  margin-top: -100px; /* Traz os botões para mais perto */
+
+  .poster-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .poster-content strong {
+    font-weight: 900;
+    font-family: var(--fonte-titulo);
+  }
+  .poster-content span {
+    font-weight: 500;
+    font-family: var(--fonte-texto);
+  }
+
+  .poster-content {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    max-width: 80%;
+
+    .animal-image-container {
+      /* width: 90%; */
+      width: 465px;
+      height: 315px;
+      border-radius: 30px;
+      /* margin: 30px auto; */
+      margin: 92px 0 0 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .animal-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 30px;
+      display: block;
+    }
+  }
+
+  .poster-nome {
+    font-size: 42px;
+    text-align: center;
+    color: var(--cor-destaque);
+    margin: 10px 0;
+    font-family: var(--fonte-titulo);
+    line-height: 1.2;
+  }
+
+  .poster-descricao strong {
+    display: inline;
+  }
+  .poster-descricao span {
+    display: inline;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+  .poster-descricao {
+    font-size: 15px;
+    text-align: justify;
+    color: var(--cor-texto);
+    margin: 5px 0;
+    font-family: var(--fonte-titulo);
+    line-height: 1;
+    width: 500px;
+    height: 92px;
+    overflow-y: auto;
+    max-width: 500px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    white-space: normal;
+    text-align: left;
+  }
+
+  .poster-ultima-vista {
+    font-size: 15px;
+    color: var(--cor-texto);
+    margin: 6px 0;
+    font-family: var(--fonte-texto);
+  }
+
+  .poster-sexo-idade-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    /* gap: 5px; */
+    margin: 8px 0;
+
+    .poster-sexo,
+    .poster-idade {
+      font-size: 15px;
+      text-align: justify;
+      color: var(--cor-texto);
+      margin: 0 !important;
+      white-space: nowrap;
+      font-family: var(--fonte-titulo);
+      line-height: 1;
+    }
+
+    .poster-idade {
+      line-height: 1.2;
+    }
+  }
+
+  .poster-contato {
+    font-size: 15px;
+    text-align: left;
+    color: var(--cor-texto);
+    margin: 8px 0;
+    font-family: var(--fonte-titulo);
+    line-height: 1.2;
+  }
+
+  .poster-local {
+    font-size: 15px;
+    text-align: center;
+    color: var(--cor-texto);
+    margin: 10px 0;
+    font-family: var(--fonte-titulo);
+    line-height: 1.2;
+  }
+}
+
+/* ====================== */
+/* MEDIA QUERIES (RESPONSIVO) */
+/* ====================== */
+@media (max-width: 768px) {
+  .poster-container {
+    width: 100%;
+    padding: 15px;
+  }
+  
+  .poster-content {
+    left: 30px;
+    max-width: 85%;
+  }
+  
+  .poster-descricao {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .poster-local {
+    margin: 60px 0;
+  }
+}
+
+/* ========================== */
+/* BOTÕES DE COMPARTILHAMENTO */
+/* ========================== */
+.poster-buttons-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Reduzi o gap entre os elementos */
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px 20px; /* Ajuste no padding */
+  border-radius: 50px;
+  backdrop-filter: blur(5px);
+}
+
+.social-share-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;  /* Tamanho reduzido */
+  height: 36px; /* Tamanho reduzido */
+  margin: 0 2px; /* Margem mínima para separação */
+}
+
+.download-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;  /* Tamanho reduzido */
+  height: 36px; /* Tamanho reduzido */
+  margin: 0 2px; /* Margem mínima para separação */
+}
+
+.social-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.social-button img {
+  width: 24px;
+  height: 24px;
+}
+
+.close-button {
+  padding: 8px 12px; /* Reduzi o padding */
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight:400;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 6px; /* Espaço entre ícone e texto */
+  font-size: 14px; /* Tamanho menor da fonte */
+  background-color: #FF6B6B;
+  color: white;
+}
+
+.download-button img {
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.2s;
+  align-items: center;
+  justify-content: center;
+  width: 32px;  /* Tamanho reduzido */
+  height: 32px; /* Tamanho reduzido */
+  padding-left: 8px;
+}
+
+.download-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
