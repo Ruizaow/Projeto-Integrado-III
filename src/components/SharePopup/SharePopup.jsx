@@ -3,9 +3,11 @@ import { useState, useRef } from "react";
 import DownloadPosterHandler from './handlers/handleDownloadPoster.js';
 
 import TwitterIcon from "../../assets/FeedPage/SharePopup/X_icon.svg";
-import InstagramIcon from "../../assets/FeedPage/SharePopup/instagram_icon.svg";
+//import InstagramIcon from "../../assets/FeedPage/SharePopup/instagram_icon.svg";
 import WhatsAppIcon from "../../assets/FeedPage/SharePopup/whatsapp_icon.svg";
 import DownloadIcon from "../../assets/FeedPage/SharePopup/download_icon.svg";
+import FacebookIcon from "../../assets/FeedPage/SharePopup/facebook_icon.svg";
+
 
 import backgroundPerdido from "../../assets/FeedPage/SharePopup/poster_perdido_background.png";
 import backgroundLocalizado from "../../assets/FeedPage/SharePopup/poster_localizado_background.png";
@@ -56,10 +58,6 @@ export default function SharePopup({
         case 'facebook':
             shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(text)}`;
             break;
-        case 'instagram':
-            // Instagram não suporta compartilhamento direto via web
-            shareUrl = 'https://www.instagram.com/';
-            break;
         case 'whatsapp':
             shareUrl = `https://wa.me/?text=${encodeURIComponent(`${text} ${url}`)}`;
             break;
@@ -72,7 +70,8 @@ export default function SharePopup({
 
     return (
         <div className="poster-container">
-            <div ref={posterRef} className="poster-modal">
+            <div ref={posterRef} 
+            className={`poster-modal ${tag === "Pet perdido" ? "poster-perdido" : "poster-localizado"}`}>
                 <img
                     src={backgroundImage}
                     alt="Background do Poster"
@@ -93,7 +92,7 @@ export default function SharePopup({
                     <p className="poster-descricao">
                         <strong>Descrição: </strong>
                         <span>{formatarDescricao(extraDescription)}</span>
-                    </p>
+                    </p> 
 
                     <p className="poster-ultima-vista">
                         <strong>Última vez visto: </strong>
@@ -143,11 +142,11 @@ export default function SharePopup({
                     </button>
 
                     <button 
-                        onClick={() => shareOnSocialMedia('instagram')}
-                        className="social-button instagram"
-                        title="Compartilhar no Instagram"
+                        onClick={() => shareOnSocialMedia('facebook')}
+                        className="social-button facebook"
+                        title="Compartilhar no Facebook"
                     >
-                        <img src={InstagramIcon} alt="Instagram" />
+                        <img src={FacebookIcon} alt="Instagram" />
                     </button>
 
                     <button 
