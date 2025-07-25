@@ -18,7 +18,7 @@ const FeedPage = () => {
     const navigate = useNavigate();
 
     const posts = usePosts();
-    const marginTop = useScrollMargin();
+    const marginTop = useScrollMargin(2, 3, '.container');
     const [showTagPopup, setShowTagPopup] = useState(false);
     const [showAuthPopup, setShowAuthPopup] = useState(false);
     const [showSharePopup, setShowSharePopup] = useState(false);
