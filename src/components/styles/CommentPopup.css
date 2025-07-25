@@ -31,11 +31,12 @@
 
 /* Ícone no canto */
 .comment-bubble::after {
-  content: "💬";
+  content: "Reportar";
   position: absolute;
   top: 8px;
   right: 12px;
   font-size: 14px;
+  color: #FF6B6B;
 }
 
 /* Área de escrita */
@@ -44,7 +45,7 @@ textarea {
   min-height: 60px;
   padding: 8px;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #969595;
   resize: vertical;
 }
 
@@ -55,11 +56,11 @@ textarea {
   padding: 6px 12px;
   border-radius: 8px;
   border: none;
-  background-color: #007BFF;
+  background-color: #4A90E2;
   color: white;
   cursor: pointer;
 }
 
 .popup button:last-child {
-  background-color: #6c757d;
+  background-color: #FF6B6B;
 }

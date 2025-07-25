@@ -17,7 +17,7 @@ const Sidebar = ({ isCollapsed, setIsCollapsed, onCreatePost }) => {
     { icon: <img src={OpenMap}       style={{width: "20px", height: "20px"}}/>, label: 'Mapa Aberto', path: '/openMap' },
     { icon: <img src={Feed}          style={{width: "20px", height: "20px"}}/>, label: 'Feed', path: '/' },
     { icon: <img src={Filter}        style={{width: "20px", height: "20px"}}/>, label: 'Filtro', path: '/' },
-    { icon: <img src={Bookmark}      style={{width: "20px", height: "20px"}}/>, label: 'Pasta', path: '/' },
+    { icon: <img src={Bookmark}    style={{width: "20px", height: "20px"}}/>, label: 'Pasta', path: '/pasta' },
     { icon: <img src={Configuration} style={{width: "20px", height: "20px"}}/>, label: 'Configurações', path: '/' }
   ];
 

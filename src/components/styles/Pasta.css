@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.pasta-feed.collapsed {
+  margin-left: 5rem;
+  transition: margin-left 0.3s ease;
+  width: 100%;
+}
+
+.pasta-feed.expanded {
+  margin-left: 15rem;
+  transition: margin-left 0.3s ease;
+  width: 100%;
+}
+
+.pasta-title {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 100px;
+  margin-left: 100px;
+  color: #323A42;
+
+}
+
+.pasta-content-box {
+  background-color: #323A42;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 0 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.saved-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.no-posts-message {
+  text-align: center;
+  color: #323A42;
+  padding: 10rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 100px;
+}
