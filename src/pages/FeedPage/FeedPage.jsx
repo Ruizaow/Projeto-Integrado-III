@@ -5,6 +5,7 @@ import { usePosts } from './hooks/usePosts.js';
 import { useScrollMargin } from './hooks/useScrollMargin.js';
 
 import SharePopup from '../../components/SharePopup/SharePopup.jsx';
+import AuthPopup from '../../components/AuthPopup/AuthPopup.jsx';
 import TagPopup from '../../components/TagPopup.jsx';
 import Navbar from '../../components/Navbar.jsx';
 import Sidebar from '../../components/Sidebar.jsx';
@@ -19,6 +20,7 @@ const FeedPage = () => {
     const posts = usePosts();
     const marginTop = useScrollMargin();
     const [showTagPopup, setShowTagPopup] = useState(false);
+    const [showAuthPopup, setShowAuthPopup] = useState(false);
     const [showSharePopup, setShowSharePopup] = useState(false);
     const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(true);
     const [selectedPostForShare, setSelectedPostForShare] = useState(null);
@@ -37,8 +39,14 @@ const FeedPage = () => {
 
     return (
         <div className="container">
-            <div className="visible-navbar"> <Navbar /> </div> {/* essa navbar está com position: fixed, portanto não faz os elementos da página descerem */}
-            <div className="occult-navbar"> <Navbar /> </div> {/* essa navbar está aqui para fazer com que os elementos da página desçam, ela não é visível */}
+            <div className="visible-navbar">    {/* essa navbar está com 'position: fixed', portanto não faz os elementos da página descerem */}
+                <Navbar
+                    onProfileClick={() => setShowAuthPopup(true)}
+                />
+            </div>
+            <div className="occult-navbar">     {/* essa navbar está aqui para fazer com que os elementos da página desçam, ela não é visível e nem clicável */}
+                <Navbar />
+            </div>
                 
             <div className="page-info">
                 <div className="sidebar-component">
@@ -78,8 +86,13 @@ const FeedPage = () => {
                     <Map expanded={false} markers={posts} />
                 </div>
             </div>
+
+            {showAuthPopup && (
+                <AuthPopup
+                    onClose={() => setShowAuthPopup(false)}
+                />
+            )}
             
-            {/* COISAS DO POSTER 4 */}
             {showSharePopup && selectedPostForShare && (
                 <SharePopup
                     name={selectedPostForShare.name}
