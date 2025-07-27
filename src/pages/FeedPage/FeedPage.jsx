@@ -24,6 +24,10 @@ const FeedPage = () => {
     const [showSharePopup, setShowSharePopup] = useState(false);
     const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(true);
     const [selectedPostForShare, setSelectedPostForShare] = useState(null);
+    const [savedPosts, setSavedPosts] = useState(() => {
+        const storedPosts = localStorage.getItem('pasta');
+        return storedPosts ? JSON.parse(storedPosts) : [];
+    });
 
     const handleAddPostClick = (option) => {
         const tagOptions = {
@@ -34,6 +38,20 @@ const FeedPage = () => {
         if (tag) {
             navigate(`/createPost/${option}`, { state: { tag } });
             setShowTagPopup(false);
+        }
+    };
+
+    const handleSavePost = (post) => {
+        const isPostAlreadySaved = savedPosts.some(savedPost => savedPost.id === post.id);
+
+        if (!isPostAlreadySaved) {
+            const updatedSavedPosts = [...savedPosts, post];
+            setSavedPosts(updatedSavedPosts);
+            localStorage.setItem('pasta', JSON.stringify(updatedSavedPosts));
+        } else {
+            const updatedSavedPosts = savedPosts.filter(savedPost => savedPost.id !== post.id);
+            setSavedPosts(updatedSavedPosts);
+            localStorage.setItem('pasta', JSON.stringify(updatedSavedPosts));
         }
     };
 
@@ -60,6 +78,7 @@ const FeedPage = () => {
                     {posts.map((post) => (
                         <Post
                             key={post.id}
+                            id={post.id} // Pass the id
                             username="username"
                             timestamp={new Date(post.timestamp).toLocaleString()}
                             name={post.name}
@@ -76,6 +95,7 @@ const FeedPage = () => {
                                 setShowSharePopup(true);
                             }}
                             onMapClick={() => alert(`Abrir mapa em: ${post.location}`)}
+                            onSavePost={() => handleSavePost(post)} // Pass the handleSavePost function
                         />
                     ))}
                 </div>

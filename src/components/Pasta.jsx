@@ -17,6 +17,13 @@ function Pasta() {
     }
   }, []);
 
+  const handleSidebarToggle = () => {
+   if(!savedPosts.some((p) => p.id === post.id)){
+    const updatedPosts = [...savedPosts, post];
+    setSavedPosts(updatedPosts);
+    localStorage.setItem("pasta", JSON.stringify(updatedPosts));
+   }
+  }
   return (
     <div className="container">
       <div className="visible-navbar">
@@ -58,6 +65,7 @@ function Pasta() {
                     tag={post.tag}
                     extraDescription={post.extra}
                     imageUrl={post.image}
+                    onSavePost={() => handleSavePost(post)}
                     onSharePost={() => {}}
                     onMapClick={() => alert(`Abrir mapa em: ${post.location}`)}
                   />

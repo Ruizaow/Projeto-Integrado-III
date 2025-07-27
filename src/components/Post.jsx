@@ -8,7 +8,7 @@ import CommentPopup from './CommentPopup.jsx';
 
 const Post = ({ 
   username, timestamp, tag, name, age, breed,
-  sex, owner, date, extraDescription, imageUrl, onMapClick, onSharePost
+  sex, owner, date, extraDescription, imageUrl, onMapClick, onSharePost, onSavePost, id // Adicione o ID aqui
 }) => {
   
   return (
@@ -56,7 +56,9 @@ const Post = ({
           </button>
           <div className="actions">
             <CommentPopup trigger={<img src={Comment} style={{ cursor: "pointer" }} alt="Comentar" />}/>
-            <img src={Bookmark} alt="Favoritar" />
+            <button onClick={onSavePost} className="save-button" style={{ background: "none", border: "none", padding: 0, cursor: "pointer" }}>
+              <img src={Bookmark} alt="Salvar" />
+            </button>
             <img 
               src={Share} 
               alt="Compartilhar" 
