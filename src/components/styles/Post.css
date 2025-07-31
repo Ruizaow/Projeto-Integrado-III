@@ -8,7 +8,6 @@
   border: 1px solid #797979;
   border-radius: 28px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
   margin-bottom: 2rem;
 
   .post-header {
@@ -32,13 +31,23 @@
     }
   }
 
-  h2 {
+  h2{
     font-family: "Geologica", sans-serif;
-    font-style: bold;
-    color: #323A42;
-    
+    font-weight: bold;
     margin-left: 2rem;
     margin-bottom: 1.5rem;
+    display: inline-block;
+
+
+    &.pet-perdido {
+      background-color: #0879D9;
+      color: blue !important;
+    }
+    
+    &.pet-localizado {
+      background-color: #FF6B6B;
+      color: red !important
+    }
   }
 
   .post-image {
@@ -51,7 +60,6 @@
       background-color: #AAA;
       width: 575px;
       height: 280px;
-
       display: flex;
       align-items: center;
       justify-content: center;
@@ -89,21 +97,17 @@
 
     .map-button {
       background-color: #FF6B6B;
-
       font-family: "Geologica", sans-serif;
       font-weight: 600;
       color: #FFF;
-
       border: none;
       border-radius: 4.6px;
       padding: 14px 80px;
-
       cursor: pointer;
     }
     .actions {
       display: flex;
       gap: 24px;
-
       img {
         width: 28px;
         height: 28px;

@@ -39,6 +39,7 @@ import Smoke4 from "../assets/About/Explanation/Smoke4.png";
 import Star1 from "../assets/About/Explanation/Star1.png";
 import Star2 from "../assets/About/Explanation/Star2.png";
 import Star3 from "../assets/About/Explanation/Star3.png";
+import moldura from "../assets/About/Explanation/moldura.png";
 
 import Navbar from '../components/Navbar.jsx'
 import Sidebar from '../components/Sidebar.jsx'
@@ -74,7 +75,7 @@ const About = () => {
                                 de fazer a diferença, criamos essa ferramenta para unir forças com quem também quer ajudar. Porque
                                 cuidar dos animais é, acima de tudo, um trabalho coletivo. </p>
                         </div>
-                        <img src={Placeholder} />
+                        <img src={moldura} />
                     </div>
 
                     <div className="values">
@@ -244,43 +245,30 @@ const About = () => {
                                 <img src={User} />
                             </div>
                             <div className="info">
-                                <h1> história comovente </h1>
-                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque <br/>
-                                    elit metus, tincidunt ut orci nec, faucibus feugiat ante. Maecenas <br/>
-                                    cursus libero quam, non aliquet lacus sodales ut </p>
+                                <h1> A história da Luciana </h1>
+                                <p> Eu nunca vou esquecer o que o GPets fez por mim e pela minha cadelinha, a Luna. Ela desapareceu numa tarde chuvosa, quando o portão ficou mal fechado. Eu estava desesperada, 
+                                    passei horas andando pelo bairro sem sucesso. No mesmo dia, criei o cadastro dela no aplicativo, marquei no mapa onde ela tinha sido vista pela última vez e compartilhei o cartaz gerado pelo GPets.
+                                     Em menos de 24 horas, uma pessoa que usa o app viu a Luna perto de um abrigo cadastrado e postou no mapa.
+                                     O abrigo confirmou que ela estava lá, segura! Graças a essa rede, conseguimos nos reencontrar rapidamente. O GPets não foi só um aplicativo, foi o que me deu esperança quando eu mais precisava. 
+                                     Obrigada por criarem algo que realmente faz diferença na vida das pessoas e dos animais." 🐾💕 </p>
                             </div>
                         </div>
-                        <div className="select">
-                            <div className="selectedCircle"></div>
-                            <div className="circle"></div>
-                            <div className="circle"></div>
-                        </div>
+
                     </div>
 
                     <div className="faq">
                         <div className="questions">
                             <h1> Perguntas </h1>
-                            <div className="bar"></div>
-                            <div className="bar"></div>
-                            <div className="bar"></div>
-                            <div className="bar"></div>
+                            <div className="bar">Como eu faço para cadastrar meu pet e o que acontece se ele desaparecer? </div>
+                            <div className="bar"> Posso seguir outros usuários ou ONGs dentro do aplicativo para acompanhar resgates e adoções?</div>
+                            <div className="bar">Se eu encontrar um animal perdido na rua, como posso avisar o dono pelo GPets?</div>
                         </div>
                         <div className="interface">
                             <img src={User} />
                         </div>
                     </div>
 
-                    <div className="help">
-                        <h1> Outras formas de ajudar </h1>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elit metus, <br/>
-                            tincidunt ut orci nec, faucibus feugiat ante. Maecenas cursus libero quam, non <br/>
-                            aliquet lacus sodales ut </p>
-                        <div className="images">
-                            <div className="card"></div>
-                            <div className="card"></div>
-                            <div className="card"></div>
-                        </div>
-                    </div>
+
 
                     <footer>
                         <div className="info">

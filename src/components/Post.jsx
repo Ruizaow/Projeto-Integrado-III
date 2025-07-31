@@ -22,7 +22,9 @@ const Post = ({
           <span className="timestamp">{timestamp}</span>
         </div>
         
-        <h2 style={{textTransform: "uppercase"}}>{tag}</h2>
+        <h2 className={`tag ${tag}`} style={{textTransform: "uppercase"}}>
+          {tag}
+        </h2>
 
         <div className="post-image">
           {imageUrl ? (
